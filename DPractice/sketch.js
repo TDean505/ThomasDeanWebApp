@@ -175,7 +175,7 @@ function thefuturetext(){
   var myDiv = createDiv("The Future of Brain Implants and VR");
   myDiv.style("position", 15, 5);
   //myDiv.style("rotate", 45);
-  myDiv.style("color", "#696969");
+  myDiv.style("color", "#000000");
   myDiv.style("font-size","55px");
 
 }
@@ -200,9 +200,9 @@ function learningaboutimplantscontent(){
 
 function thefuturecontent(){
   var myDiv = createDiv("The future will bring brain implants and VR together. Brain implants will be able to not only respond to the users’ commands but stimulate the neurons as well to create a completely immersive VR experience. The result will be an environment where the user simply uses their mind to interact with the virtual world.");
-  myDiv.style("position", 50, 200);
+  myDiv.style("position", 400, 100);
   //myDiv.style("rotate", 45);
-  myDiv.style("color", "#696969");
+  myDiv.style("color", "#000000");
   myDiv.style("font-size","20px");
 
 }
@@ -219,4 +219,5 @@ function presetup(){
   myDiv.style("font-size","70px");
 
 }
+
 
