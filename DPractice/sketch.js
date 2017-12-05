@@ -1,3 +1,33 @@
+/*
+Title: Brain Implants and VR Web App
+Imagined, Designed, and Programmed by: Thomas Dean
+Date: 12/5/17
+Description: An interactive websight desighnd to inform users about the relationship betwean brain implants and VR.
+Sources of ideas and inspiration (title, author, URL):
+
+Works Cited
+Aflalo, Tyson. “Use of Brain Implants in Humans.” AccessScience, McGraw-Hill Education, 2016.
+Artificial intelligence and cybernetics. Photography. Britannica ImageQuest, Encyclopædia Britannica, 25 May 2016.
+quest.eb.com/search/132_1304395/1/132_1304395/cite. Accessed 2 Nov 2017.
+Baker, M. Pauline. “Virtual Reality.” AccessScience, McGraw-Hill Education, 2014.
+Futuristic city. Photography. Britannica ImageQuest, Encyclopædia Britannica, 25 May 2016.
+quest.eb.com/search/132_1249133/1/132_1249133/cite. Accessed 8 Nov 2017.
+Researcher wearing virtual reality helmet & glove. Photography. Britannica ImageQuest, Encyclopædia Britannica, 25 May 2016.
+quest.eb.com/search/132_1306533/1/132_1306533/cite. Accessed 8 Nov 2017.
+
+
+Includes code from (title, author, URL):
+ * "Cursor over button" - Ilva (no URL) -- see code line 77
+ *
+ *
+
+ Sources for backround/ general imformation:
+  P5.js reference page was used in the creation of this code.
+
+*/
+
+
+
 var xyz;
 var img;
 var button;
@@ -34,6 +64,7 @@ function basicbutton(x,y,z,a){ //x=x y=y z=name of button  a = function name you
   button.mousePressed(a); //use this comant for function actions for button
   button.style("background-color", "#696969");
   button.style("border","0px");
+  button.style("cursor","pointer");
 }
 
 function basicbuttona(x,y,z,a,b){ //x=x y=y z=name of button  a = function name you want to have happen b= second funciton
@@ -43,6 +74,7 @@ function basicbuttona(x,y,z,a,b){ //x=x y=y z=name of button  a = function name 
   button.style("border","0px");
   button.mousePressed(a);
   button.mousePressed(b);
+  button.style("cursor","pointer"); //code from Ilva for pointer finger over button
 }
 
 function Imge(x,y,z,a,b){ // x=x y=y, z= img name, a= imige width b=immage height
@@ -171,7 +203,7 @@ function backgroundinfotext(){ //backround info title
   myDiv.style("font-size","55px");
 }
 
-function thefuturetext(){
+function thefuturetext(){ //title text for the future page
   var myDiv = createDiv("The Future of Brain Implants and VR");
   myDiv.style("position", 15, 5);
   //myDiv.style("rotate", 45);
@@ -180,35 +212,35 @@ function thefuturetext(){
 
 }
 
-function backroundinfocontent(){
+function backroundinfocontent(){ //content for backround info
   var myDiv = createDiv("Virtual Reality is a system which allows a human, or multiple humans, to interact with a virtual world. The user of the virtual reality system uses their body to move throughout and interact with the virtual environment. The most successful virtual reality systems are capable of making the user feel as though they are truly present in the virtual world, with all their senses being artificially stimulated to trick the brain into believing the body is present in the virtual world. The virtual environment must be updated everytime the user moves, so initially virtual reality machines were very expensive and only used in high budget projects. However, the cost of virtual reality machines has dropped significantly and has been applied to other fields, like gaming. A traditional VR setup uses a headset to show the user the virtual world and hand controllers or gloves to allow the user to interact with the virtual world. Motion sensors are also utilized to allow the user to move around in the virtual world.");
   myDiv.style("position", 15, 200);
   //myDiv.style("rotate", 45);
   myDiv.style("color", "#F8F8FF");
-  myDiv.style("font-size","14px");
-
-}
-
-function learningaboutimplantscontent(){
-  var myDiv = createDiv("Brain implants work by tracking individual neuron action and using the activation of a neuron as a command to perform a function. A brain implant must be programmed for which neurons trigger specific motions, something that a human must do by experimenting on which neurons control specific actions. Brain implants work by using very small wires that are inserted into the brain. These wires are very sensitive and can sense the activation and deactivation of neurons. ");
-  myDiv.style("position", 510, 100);
-  //myDiv.style("rotate", 45);
-  myDiv.style("color", "#F8F8FF");
-  myDiv.style("font-size","14px");
-
-}
-
-function thefuturecontent(){
-  var myDiv = createDiv("The future will bring brain implants and VR together. Brain implants will be able to not only respond to the users’ commands but stimulate the neurons as well to create a completely immersive VR experience. The result will be an environment where the user simply uses their mind to interact with the virtual world.");
-  myDiv.style("position", 400, 100);
-  //myDiv.style("rotate", 45);
-  myDiv.style("color", "#000000");
   myDiv.style("font-size","20px");
 
 }
 
+function learningaboutimplantscontent(){ //content for learning about inplants page
+  var myDiv = createDiv("Brain implants work by tracking individual neuron action and using the activation of a neuron as a command to perform a function. A brain implant must be programmed for which neurons trigger specific motions, something that a human must do by experimenting on which neurons control specific actions. Brain implants work by using very small wires that are inserted into the brain. These wires are very sensitive and can sense the activation and deactivation of neurons. ");
+  myDiv.style("position", 510, 100);
+  //myDiv.style("rotate", 45);
+  myDiv.style("color", "#F8F8FF");
+  myDiv.style("font-size","20px");
 
-function presetup(){
+}
+
+function thefuturecontent(){ //content for the future
+  var myDiv = createDiv("The future will bring brain implants and VR together. Brain implants will be able to not only respond to the users’ commands but stimulate the neurons as well to create a completely immersive VR experience. The result will be an environment where the user simply uses their mind to interact with the virtual world.");
+  myDiv.style("position", 400, 100);
+  //myDiv.style("rotate", 45);
+  myDiv.style("color", "#000000");
+  myDiv.style("font-size","25px");
+
+}
+
+
+function presetup(){ //presetup page, "click the button" page
   createCanvas(windowWidth, windowHeight);
   background(100);
   basicbuttona(windowWidth/2, windowHeight/2,"Brain Implants and VR Web App",cthing, home);
